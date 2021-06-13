@@ -72,20 +72,21 @@ $(document).ready(function() {
 
     $("#enviar").click(function(evento){
         evento.preventDefault();
-        let nombre = ($("input[name=nome]").val())? $("input[name=nome]").val() : null;
-        let apellido = ($("input[name=apellido]").val())? $("input[name=apellido]").val() : null;
-        let telefono = ($("input[name=telefono]").val())? $("input[name=telefono]").val() : null;
-        let email = ($("input[name=email]").val())? $("input[name=email]").val() : null;
-        let mensaje = ( $("#mensaje").val())? $("#mensaje").val() : null;
-        console.log(nombre);
-        if(nombre == null || apellido == null || mensaje == null || telefono == null)
+       var datos = $('#formTrab').serializeArray();
+       error = '';
+       $(datos).each(function (index, value) {
+           if(value.value == ''){
+                error += `El ${value.name} es obligatorio<br>`;
+           }
+       })
+
+        if(error == '')
         {
-            $('#msj').html("<b>Todos los campos son obligatorios<b>")
-        }else if(email.indexOf('@', 0) == -1 || email.indexOf('.', 0) == -1) {
-            $('#msj').html("<b>El correo electronico debe ser correcto<b>");
-        }else{
             $("#form")[0].reset();
-            swal(nombre+", Gracias por su interes en trabajar con nosotros!. En breve nos pondremos en contacto.");
+            swal("Gracias por su interes en trabajar con nosotros!. En breve nos pondremos en contacto.");
+        }else{
+
+            $('#msj').html(error);
         }
     })
 

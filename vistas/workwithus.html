@@ -40,30 +40,30 @@
             </table>
         </div>
         <div class="col-12 formulario">
-            <form class="col-lg-6 col-md-12 col-xs-12 mx-auto d-block align-item-center vh-100 justify-content-center">
+            <form class="col-lg-6 col-md-12 col-xs-12 mx-auto d-block align-item-center vh-100 justify-content-center" id="formTrab">
                 <h2>Unite!!</h2>
                 <div class="row">
                     <fieldset class="col-md-6 col-ms-6 col-xs-12">
                         <legend>Datos personales</legend>
                         <div class="formGroup">
                             <label for="nombre">Nombre</label>
-                            <input type="text" class="form-group" name="nome">
+                            <input type="text" class="form-group" name="nombre" id="nombre">
                         </div>
                         <div class="formGroup">
                             <label for="apellido">Apellido</label>
-                            <input type="text" name="apellido" class="form-group">
+                            <input type="text" name="apellido" id="apellido" class="form-group">
                         </div>
                         <div class="formGroup">
                             <label for="telefono">Teléfono</label>
-                            <input type="text" name="telefono" class="form-group">
+                            <input type="text" name="telefono" id="telefono" class="form-group">
                         </div>
                         <div class="formGroup">
                             <label for="email">Email</label>
-                            <input type="text" name="email" class="form-group">
+                            <input type="text" name="email" id="email" class="form-group">
                         </div>
                         <div class="formGroup">
                             <label for="empresa">Fecha de Nacimiento</label>
-                            <input type="date" name="dateBirth" class="form-group">
+                            <input type="date" name="dateBirth" id="fechaNacimiento" class="form-group">
                         </div>
                     </fieldset>
                     <fieldset class="col-md-6 col-ms-6 col-xs-12">
@@ -71,17 +71,17 @@
                         <label for="file-upload" class="subir">
                             <i class="fas fa-cloud-upload-alt"></i> Subir archivo
                         </label>
-                        <input id="file-upload" onchange='cambiar()' type="file" name="cv" style='display: none;'/>
+                        <input id="file-upload" onchange='cambiar()' type="file" name="cv" id="cv" style='display: none;'/>
                         <div id="info"></div>
                         <div class="formGroup">
                             <label for="comentarios">Comentarios</label>
-                            <textarea rows="5" cols="40" class="form-group" name="mensaje" id="mensaje">Cuéntenos porque quiere trabajar con nosotros...
+                            <textarea rows="5" cols="40" class="form-group" name="mensaje" id="mensaje" placeholder="Cuéntenos porque quiere trabajar con nosotros...">
                             </textarea>
                         </div>
                     </fieldset>
                 </div>
                 <hr>
-                <div class="msj"></div>
+                <div id="msj"></div>
                 <div class="d-flex justify-content-between">
                     <button type="reset" class="boton boton--primary form-control w-50">Limpiar formulario</button>
                     <button type="submit" class="boton boton--primary form-control w-50" name="enviar" id="enviar">Enviar</button>
