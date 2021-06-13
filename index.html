@@ -19,17 +19,15 @@
 					<div id="intro">
 						<h1>CLEANING SERVICES</h1>
 						<p>Lideres en servicios de limpieza y mantenimiento <a href="#footer">Consultenos</a>.</p>
-						<ul class="actions">
-							<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
 					</div>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="#main">Inicio</a></li>
+							<li class="active"><a href="#main" id="index">Inicio</a></li>
 							<li><a href="#posts">Servicios</a></li>
 							<li><a href="#footer">Contacto</a></li>
+							<li><a href="#trabaja" id="trabaja">Trabajá con nosotros</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -40,16 +38,16 @@
 
 				<!-- Main -->
 					<div id="main">
-
+						<div id="principal">
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
 									<span class="date">#cleaningservices</span>
-									<h2><a href="#">Servicio de Limpieza y Mantenimiento<br />
-									a tu puerta</a></h2>
+									<h1><a href="#">Servicio de Limpieza y Mantenimiento<br />
+									a tu puerta</a></h1>
 									<p>Cleaning Services es una compañia de reciente creación siendo su principal finalidad satisfacer la creciente necesidad de las empresas, dedicada a brindar soluciones de alta calidad, contando con un equipo de profesionales calificados, teniendo como propósito, ofrecer soluciones óptimas y certeras que satisfaga todas sus necesidades.</p>
 								</header>
-								<a href="#" class="image main"><img src="images/header.jpg" alt="" /></a>
+								<a href="#" class="image main"><img src="assets/images/header.jpg" alt="" /></a>
 								<ul class="actions special">
 									<li><a href="#nosotros" class="button large" id="conocenos">Conocenos</a></li>
 								</ul>
@@ -77,6 +75,7 @@
 								</p>
 
 							</article>
+						</div>
 						<!-- Posts -->
 							<section class="posts" id="posts">	</section>
 					</div>
@@ -84,7 +83,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<form method="post" action="#" id="form">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Nombre</label>
@@ -103,7 +102,6 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><a href="#posts" class="button icon solid solo fa-arrow-up scrolly">Consultar más servicios</a></li>
 									<li><input type="submit" id="submit" value="Enviar mensaje" /></li>
 								</ul>
 							</form>
@@ -135,7 +133,11 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="mailto:evange.gomes@gmail.com" target="_blank">evange.gomes@gmail.com</a></li></ul>
+						<ul>
+							<li><a href="#posts" class="button icon solid solo fa-arrow-up scrolly">Consultar más servicios</a></li>
+						</ul>
+						<ul>
+							<li>&copy; Untitled</li><li>Design: <a href="mailto:evange.gomes@gmail.com" target="_blank">evange.gomes@gmail.com</a></li></ul>
 					</div>
 
 			</div>
@@ -145,5 +147,6 @@
 			<script src="assets/js/class/Servicio.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/scripts.js"></script>
+			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</body>
 </html>

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    //carga de servicios
     $.getJSON("assets/js/class/data.js", function(data){
         let items = [];
         $.each(data, function(index, element){
@@ -7,7 +8,7 @@ $(document).ready(function() {
                 <header>
                     <h2><a href='#'>${element.nombre}</a></h2>
                 </header>
-                <a href='#' class='image fit'><img src='../../images/${element.imagen}' alt='' /></a>
+                <a href='#' class='image fit'><img src='../assets/images/${element.imagen}' alt='' /></a>
                 <p>${element.descripcion}</p>
                 <ul class="actions special">
                     <li><a href="#footer" class="button servicio" id="${element.id}" onclick="solicitar(this)">Solicitar Servicio</a></li>
@@ -18,7 +19,34 @@ $(document).ready(function() {
         $(".posts").append(items);
      });
 
+    //carga de seccion trabaja con nosotros
+
+    $("#trabaja").click(function(){
+        $.ajax({
+            method: "GET",
+            url:  "./vistas/workwithus.html",
+            success: function(respuesta){
+                $("#principal").html(respuesta);
+            }
+        });
+
+    });
+
+    $("#index").click(function(){
+        $.ajax({
+            method: "GET",
+            url:  "./vistas/main.html",
+            success: function(respuesta){
+                $("#principal").html(respuesta);
+            }
+        });
+
+    });
+
+
     $("a").click(function(evento){
+        $('.links li').removeClass('active');
+        $(this).parent().addClass('active');
         if($(this).attr("href").charAt(0) == "#"){
             evento.preventDefault();
             var codigo = $(this).attr("href");
@@ -37,7 +65,27 @@ $(document).ready(function() {
         }else if(email.indexOf('@', 0) == -1 || email.indexOf('.', 0) == -1) {
             $('#msg').html("<b>El correo electronico debe ser correcto<b>");
         }else{
-            $('#msg').html("<b>"+nombre+", en la brevedad nos pondremos en contacto. Gracias!<b>")
+            $("#form")[0].reset();
+            swal(nombre+", Gracias por su mensaje!. En breve nos pondremos en contacto.");
+        }
+    })
+
+    $("#enviar").click(function(evento){
+        evento.preventDefault();
+        let nombre = ($("input[name=nome]").val())? $("input[name=nome]").val() : null;
+        let apellido = ($("input[name=apellido]").val())? $("input[name=apellido]").val() : null;
+        let telefono = ($("input[name=telefono]").val())? $("input[name=telefono]").val() : null;
+        let email = ($("input[name=email]").val())? $("input[name=email]").val() : null;
+        let mensaje = ( $("#mensaje").val())? $("#mensaje").val() : null;
+        console.log(nombre);
+        if(nombre == null || apellido == null || mensaje == null || telefono == null)
+        {
+            $('#msj').html("<b>Todos los campos son obligatorios<b>")
+        }else if(email.indexOf('@', 0) == -1 || email.indexOf('.', 0) == -1) {
+            $('#msj').html("<b>El correo electronico debe ser correcto<b>");
+        }else{
+            $("#form")[0].reset();
+            swal(nombre+", Gracias por su interes en trabajar con nosotros!. En breve nos pondremos en contacto.");
         }
     })
 

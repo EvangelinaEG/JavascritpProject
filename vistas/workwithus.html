@@ -1,0 +1,93 @@
+<section class="container-fluid">
+    <div class="trabaja col-xs-12 row">
+        <div class="col-12">
+            <h1>¿Qué ofrecemos en Cleaning Services?</h1>
+            <p>
+                El clima laboral no es otra cosa que el medio en el que e desarrolla el trabajo cotidiano. La calidad del clima influye directamente en la satisfacción de los trabajadores y por lo tanto en la productividad , de esta manera mientras que un buen clima se orienta hacia los objetivos generales, un mal clima destruya el ambiente de trabajo ocasionando situciones de conflicto, malestar y generando un bajo rendimiento.
+            </p>
+            <p>
+                Las condiciones fisicas de lambiente de trabajo, una adeucada etructura de la cadena de mando, una adecuada comunicación, la personalidad de todos los colaboradores, sobre todo del personal al mando, por tanto es necesario establecer políticas mecesarias para mantener un clima laboral adecuado dentro de la organización de modo tal que éste conttribuya a la producción del negocio, que se traduzca en un servicio excelente
+            </p>
+            <table class="table mx-auto col-md-4 table">
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Beneficios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ol class="table__list table__list--mod">
+                                <li>Profesionalidad en el oficio</li>
+                                <li>Responsabilidad</li>
+                                <li>Buena presencia</li>
+                                <li>Buena comunicación</li>
+                                <li>Experiencia en el rubro (No excluyente)</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ul class="table__list table__list--mod">
+                                <li>Buen clima laboral</li>
+                                <li>Estabilidad laboral</li>
+                                <li>Posibilidad de crecimiento</li>
+                                <li>Beneficios para estudiantes</li>
+                                <li>Beneficios para madres</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12 formulario">
+            <form class="col-lg-6 col-md-12 col-xs-12 mx-auto d-block align-item-center vh-100 justify-content-center">
+                <h2>Unite!!</h2>
+                <div class="row">
+                    <fieldset class="col-md-6 col-ms-6 col-xs-12">
+                        <legend>Datos personales</legend>
+                        <div class="formGroup">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-group" name="nome">
+                        </div>
+                        <div class="formGroup">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" name="apellido" class="form-group">
+                        </div>
+                        <div class="formGroup">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" name="telefono" class="form-group">
+                        </div>
+                        <div class="formGroup">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" class="form-group">
+                        </div>
+                        <div class="formGroup">
+                            <label for="empresa">Fecha de Nacimiento</label>
+                            <input type="date" name="dateBirth" class="form-group">
+                        </div>
+                    </fieldset>
+                    <fieldset class="col-md-6 col-ms-6 col-xs-12">
+                        <legend>Datos profesionales</legend>
+                        <label for="file-upload" class="subir">
+                            <i class="fas fa-cloud-upload-alt"></i> Subir archivo
+                        </label>
+                        <input id="file-upload" onchange='cambiar()' type="file" name="cv" style='display: none;'/>
+                        <div id="info"></div>
+                        <div class="formGroup">
+                            <label for="comentarios">Comentarios</label>
+                            <textarea rows="5" cols="40" class="form-group" name="mensaje" id="mensaje">Cuéntenos porque quiere trabajar con nosotros...
+                            </textarea>
+                        </div>
+                    </fieldset>
+                </div>
+                <hr>
+                <div class="msj"></div>
+                <div class="d-flex justify-content-between">
+                    <button type="reset" class="boton boton--primary form-control w-50">Limpiar formulario</button>
+                    <button type="submit" class="boton boton--primary form-control w-50" name="enviar" id="enviar">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="assets/js/main.js"></script>

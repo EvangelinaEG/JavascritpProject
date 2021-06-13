@@ -2,6 +2,7 @@ localStorage.clear();
 var productos = [];
 var nuevo = [];
 var servicios = [];
+
 /*FUNCIONES*/
 function agregar(id){
 	var array = servicios.find(ser => ser.id == id);
@@ -13,7 +14,6 @@ function agregar(id){
 	}
 	localStorage.setItem("productos",JSON.stringify(productos));
 
-	//document.getElementById("card").setAttribute("style", "opacity:1");
 }
 
 function eliminar(elem){
@@ -46,6 +46,11 @@ function solicitar(elem){
         agregar(id);
         nuevo = JSON.parse( localStorage.getItem("productos"));
         mostrarcarro(nuevo);
+}
+
+function cambiar(){
+    var pdrs = document.getElementById('file-upload').files[0].name;
+    document.getElementById('info').innerHTML = pdrs;
 }
 /*FIN FUNCIONES*/
 
