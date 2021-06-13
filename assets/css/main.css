@@ -79,7 +79,7 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-#msg b{
+#msg b, #msj{
 	color: red!important;
 }
 .subir{
@@ -88,7 +88,7 @@ input, select, textarea {
     color:#fff;
     border:0px solid #fff;
 }
- 
+
 .subir:hover{
     color:#fff;
     background: #18bfef;

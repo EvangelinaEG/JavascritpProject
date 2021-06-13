@@ -4,7 +4,7 @@ var nuevo = [];
 var servicios = [];
 
 /*FUNCIONES*/
-function agregar(id){
+const agregar = (id) => {
 	var array = servicios.find(ser => ser.id == id);
 	var nuevoservicio = new Servicio(array.id, array.nombre, array.precio);
 	nuevoservicio.sumarIva();
@@ -16,7 +16,7 @@ function agregar(id){
 
 }
 
-function eliminar(elem){
+const eliminar = (elem) => {
 	var id = $(elem).data("producto");
 	var encontrado = productos.indexOf(productos.find(v => parseInt(v.id) == parseInt(id)));
 	productos.splice(encontrado, 1);
@@ -28,7 +28,7 @@ function eliminar(elem){
 		mostrarcarro(productos);
 }
 
-function mostrarcarro(nuevo = null){
+const mostrarcarro = (nuevo = null) => {
 	var lista = 'Hola, me interesa contratar los siguientes servicios:';
 	var total = 0;
 	for (var key in nuevo){
@@ -40,7 +40,7 @@ function mostrarcarro(nuevo = null){
 
 }
 
-function solicitar(elem){
+const solicitar = (elem) => {
         var id = $(elem).attr("id");
         localStorage.clear();
         agregar(id);
@@ -48,7 +48,7 @@ function solicitar(elem){
         mostrarcarro(nuevo);
 }
 
-function cambiar(){
+const cambiar = () => {
     var pdrs = document.getElementById('file-upload').files[0].name;
     document.getElementById('info').innerHTML = pdrs;
 }
