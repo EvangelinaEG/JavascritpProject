@@ -19,5 +19,12 @@
 	"precio" : "30000",
 	"descripcion" : "Limpieza en general del domicilio, barrido y lavado de vereda, baños, cocina, living, comedor, muebles, vidrios, pisos, lavado de ropa, planchado.",
 	"imagen" : "hogar.jpg"
+	},
+	{
+	"id" : "4",
+	"nombre" : "Particular",
+	"precio" : "0",
+	"descripcion" : "Limpieza en general de ambientes",
+	"imagen" : "ambientes.jpg"
 	}
 ]

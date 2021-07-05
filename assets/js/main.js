@@ -1,6 +1,8 @@
 $(document).ready(function() {
+
     //carga de servicios
     $.getJSON("assets/js/class/data.js", function(data){
+        $(".posts").html("");
         let items = [];
         $.each(data, function(index, element){
             servicios.push(element);
@@ -32,15 +34,10 @@ $(document).ready(function() {
 
     });
 
-    $("#index").click(function(){
-        $.ajax({
-            method: "GET",
-            url:  "./vistas/main.html",
-            success: function(respuesta){
-                $("#principal").html(respuesta);
-            }
-        });
+    //carga de la sección principal
 
+    $("#index").click(function(){
+       main();
     });
 
 
@@ -107,6 +104,5 @@ $(document).ready(function() {
           if(document.form.elements[i].type == "checkbox")
              document.form.elements[i].checked = 0
     });
-
 
 });

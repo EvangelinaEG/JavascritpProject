@@ -4,6 +4,15 @@ var nuevo = [];
 var servicios = [];
 
 /*FUNCIONES*/
+var main = () =>{
+        $.ajax({
+            method: "GET",
+            url:  "./vistas/main.html",
+            success: function(respuesta){
+                $("#principal").html(respuesta);
+            }
+        });
+    }
 const agregar = (id) => {
 	var array = servicios.find(ser => ser.id == id);
 	var nuevoservicio = new Servicio(array.id, array.nombre, array.precio);
@@ -36,7 +45,8 @@ const mostrarcarro = (nuevo = null) => {
 	   	total += nuevo[key].precio;
 	    }
 		$("html,body").animate({scrollTop: $("#footer").offset().top}, 2000);
-	document.getElementById("message").value = lista+"\n TOTAL(iva incluido): "+total;
+		var tot = (total > 0)? "\n TOTAL(iva incluido): "+ total : '';
+		document.getElementById("message").value = lista+ tot;
 
 }
 
